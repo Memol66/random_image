@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+#include <random>
+#include <opencv2/opencv.hpp>
+
+using namespace std;
+using namespace cv;
+
+int main() {
+    // Image size
+    int rows = 256;
+    int cols = 256;
+
+    // Generate a random image matrix
+    Mat random_image(rows, cols, CV_32F);
+    randu(random_image, Scalar(0), Scalar(1)); // Generate random values between 0 and 1
+
+    // Display the image
+    imshow("Random Image", random_image);
+    waitKey(0);
+
+    return 0;
+}
